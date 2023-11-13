@@ -1,23 +1,24 @@
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
-function Banner() {
+function Banner({ title }: { title: string }) {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h1>Lorem</h1>
+          <h1>{title}</h1>
         </div>
       </div>
       <nav>
         <ul className={styles.nav}>
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">About us</a>
+            <Link to="/about">About us</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
